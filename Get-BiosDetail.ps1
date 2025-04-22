@@ -38,7 +38,17 @@ Function Get-BiosDetail{
         .EXAMPLE
             Get-BiosDetail -ReportType bios
 
-        .Example
+        .EXAMPLE
+            #this example warms up sudo before running, which means you will not be prompted.
+            sudo -v
+            Get-BiosDetail
+
+        .EXAMPLE
+            Get-BiosDetail -ReportType bios -UseSudoElevation:$false
+
+            This example showed the syntax for systems that do not require sudo.
+
+        .EXAMPLE
 
             code -d "path-to-file-1" "path-to-file2"
 
